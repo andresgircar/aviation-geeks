@@ -1,11 +1,11 @@
 const imagesList = () => {
-    return fetch("http://localhost:3000/images")
+    return fetch("https://aviation-geeks.vercel.app/images")
             .then((res) => res.json())
             .catch((err) => console.log(err));
 }
 
 const newImage = (manufacturer, model, url) => {
-    return fetch("http://localhost:3000/images", {
+    return fetch("https://aviation-geeks.vercel.app/images", {
         method :'POST',
         headers: {
             "Content-Type": "application/json"
@@ -21,7 +21,7 @@ const newImage = (manufacturer, model, url) => {
 }
 
 const deleteImage = (manufacturer, model, url) => {
-    return fetch("http://localhost:3000/images", {
+    return fetch("https://aviation-geeks.vercel.app/images", {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json"
@@ -35,7 +35,7 @@ const deleteImage = (manufacturer, model, url) => {
 }
 
 async function searchImage(palabraClave){
-    const conexion = await fetch(`http://localhost:3000/images?q=${palabraClave}`);
+    const conexion = await fetch(`https://aviation-geeks.vercel.app/images?q=${palabraClave}`);
     const conexionConvertida = await conexion.json();
     return conexionConvertida.filter(image => {
         return image.manufacturer.toLowerCase().includes(palabraClave.toLowerCase()) ||
