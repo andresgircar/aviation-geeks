@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="shortcut icon" href="img/logo-img.webp" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marvel:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Aviation geeks</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="">
+                    <img src="img/logo-img-white.webp" alt="aviation geeks logo image, paper airplane illustration">
+                    <h2 class="logo-text">Aviation Geeks</h2>
+                </a>
+            </div>
+            <input class="search-bar" type="text" placeholder="Buscar" data-search>
+            <ul>
+                <li><a href="">Acerca de</a></li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1 class="hero-text">¡LAS MEJORES IMÁGENES SOBRE AVIACIÓN!</h1>
+        </section>
+    </header>
+    <main>
+        <section data-gallery class="gallery-section">
+        </section>
+        <section class="form-section" data-form-section>
+            <form data-form>
+                <h3>Añade tus fotos</h3>
+                <label for="fabricante">Fabricante</label>
+                <select data-manufacturer name="manufacturer" id="fabricante" required>
+                    <option value="" disabled selected>Selecciona un fabricante</option>
+                    <option value="airbus">Airbus</option>
+                    <option value="atr">ATR</option>
+                    <option value="beechcraft">Beechcraft</option>
+                    <option value="boeing">Boeing</option>
+                    <option value="bombardier">Bombardier</option>
+                    <option value="cessna">Cessna</option>
+                    <option value="dassault">Dassault</option>
+                    <option value="de havilland">De Havilland</option>
+                    <option value="dornier">Dornier</option>
+                    <option value="douglas">Douglas</option>
+                    <option value="embraer">Embraer</option>
+                    <option value="mcdonnell douglas">McDonnell Douglas</option>
+                    <option value="pilatus">Pilatus</option>
+                    <option value="piper">Piper</option>
+                </select>
+                <label for="modelo">Modelo</label>
+                <input data-model type="text" name="modelo" id="modelo" placeholder="B727-200" required>
+                <label for="url">URL</label>
+                <input data-url type="url" name="url" id="url" placeholder="https://aviationcoolimages.com" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <button class="add-new-photo" id="form-toggle">+</button>
+    <footer>
+        <h4>Diseño y desarrollo: Andrés Giraldo</h4>
+        <div class="social-container"></div>
+    </footer>
+    <script src="js/controllers/main.js" type="module"></script>
+</body>
+</html>
